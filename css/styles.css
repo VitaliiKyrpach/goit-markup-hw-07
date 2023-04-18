@@ -32,7 +32,8 @@ body {
   background-color: var(--primary-background);
 }
 .container {
-  max-width: 1158px;
+  /* max-width: 1158px; */
+  max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -103,9 +104,12 @@ body {
 
 .text-title {
   color: var(--secondary-text-color);
-  font-weight: 500;
+  /* font-weight: 500;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.2; */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
 }
 .text {
@@ -215,7 +219,6 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
 }
 .logo-head {
   color: var(--secondary-text-color);
@@ -269,8 +272,8 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   text-align: center;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back.jpg);
   background-repeat: no-repeat;
@@ -280,37 +283,41 @@ body {
 .hero-title {
   color: var(--third-text-color);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  width: 496px;
-  margin: 0 auto 48px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0 2em;
+  width: 320px;
+  margin: 0 auto 72px;
 }
 /* -----------------advantages----------------- */
 .advantages {
-  padding-top: 120px;
+  /* padding-top: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .icon-pos {
   height: 112px;
   margin-bottom: 8px;
   background-color: var(--secondary-background);
   border-radius: 4px;
-  display: flex;
+  display: none;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .adv-list {
-  display: flex;
-  gap: 24px;
+  /* display: flex;
+  gap: 24px; */
 }
 .adv-list .list-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
 }
 .advantages .text-title {
   margin-bottom: 8px;
 }
 /* -----------------What are we doing----------------- */
 .examples {
+  display: none;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -324,17 +331,21 @@ body {
 /* -----------------team----------------- */
 .team {
   background-color: var(--secondary-background);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .team .title {
   margin-bottom: 72px;
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 72px;
+  /* gap: 24px; */
 }
 .team .card {
+  width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
@@ -375,18 +386,24 @@ body {
 }
 /* -----------------Customers----------------- */
 .customers {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
 }
 .customers .title {
   margin-bottom: 72px;
 }
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 72px;
+  /* gap: 24px; */
 }
 .cust-item {
-  width: calc((100% - 120px) / 6);
+  flex-basis: calc((100% - 16px) / 2);
+  /* width: calc((100% - 120px) / 6); */
   height: 88px;
 }
 .cust-link {
@@ -411,8 +428,11 @@ body {
 /* -----------------footer----------------- */
 .footer {
   background-color: var(--footer-background);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.footer .container {
+  display: flex;
 }
 .content {
   margin-right: 120px;
@@ -462,7 +482,6 @@ body {
   fill: currentColor;
 }
 .subscribe {
-  margin-left: auto;
 }
 .subscribe .text {
   display: block;
@@ -470,11 +489,15 @@ body {
   font-weight: 500;
   margin-bottom: 16px;
 }
+.sub-form {
+  display: flex;
+}
 .sub-mail {
-  width: 264px;
+  width: 100%;
+  /* width: 264px; */
   height: 40px;
   padding: 8px 16px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   color: var(--third-text-color);
   background-color: transparent;
   border: 1px solid #ffffff;
@@ -495,6 +518,8 @@ body {
   display: flex;
   gap: 16px;
   padding: 8px 24px;
+  width: 165px;
+  height: 40px;
 }
 
 /* -----------------backdrop----------------- */
@@ -512,8 +537,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  padding: 72px 24px 24px;
+  width: 392px;
+  padding: 72px 16px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -643,4 +668,41 @@ body {
   display: block;
   min-width: 169px;
   margin: 0 auto;
+}
+/* -----------------@media----------------- */
+@media screen and (max-width: 767px) {
+  .adv-list .list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .advantages .text-title {
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 72px;
+  }
+  .content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .smedia .text {
+    text-align: center;
+  }
+  .subscribe {
+    width: 100%;
+  }
+  .subscribe .text {
+    text-align: center;
+  }
+  .sub-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sub-mail {
+    margin-bottom: 16px;
+  }
 }
