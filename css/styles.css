@@ -32,7 +32,6 @@ body {
   background-color: var(--primary-background);
 }
 .container {
-  /* max-width: 1158px; */
   max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
@@ -291,7 +290,6 @@ body {
 }
 /* -----------------advantages----------------- */
 .advantages {
-  /* padding-top: 120px; */
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -301,17 +299,8 @@ body {
   background-color: var(--secondary-background);
   border-radius: 4px;
   display: none;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
-.adv-list {
-  /* display: flex;
-  gap: 24px; */
-}
-.adv-list .list-item {
-  /* width: calc((100% - 72px) / 4); */
-}
+
 .advantages .text-title {
   margin-bottom: 8px;
 }
@@ -342,7 +331,6 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 72px;
-  /* gap: 24px; */
 }
 .team .card {
   width: 264px;
@@ -388,8 +376,6 @@ body {
 .customers {
   padding-top: 96px;
   padding-bottom: 96px;
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
 }
 .customers .title {
   margin-bottom: 72px;
@@ -399,11 +385,9 @@ body {
   flex-wrap: wrap;
   column-gap: 16px;
   row-gap: 72px;
-  /* gap: 24px; */
 }
 .cust-item {
   flex-basis: calc((100% - 16px) / 2);
-  /* width: calc((100% - 120px) / 6); */
   height: 88px;
 }
 .cust-link {
@@ -433,9 +417,6 @@ body {
 }
 .footer .container {
   display: flex;
-}
-.content {
-  margin-right: 120px;
 }
 .footer .logo {
   display: block;
@@ -494,10 +475,8 @@ body {
 }
 .sub-mail {
   width: 100%;
-  /* width: 264px; */
   height: 40px;
   padding: 8px 16px;
-  /* margin-right: 24px; */
   color: var(--third-text-color);
   background-color: transparent;
   border: 1px solid #ffffff;
@@ -670,6 +649,7 @@ body {
   margin: 0 auto;
 }
 /* -----------------@media----------------- */
+
 @media screen and (max-width: 767px) {
   .adv-list .list-item:not(:last-child) {
     margin-bottom: 72px;
@@ -704,5 +684,115 @@ body {
   }
   .sub-mail {
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .hero-title {
+    width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+  .adv-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .adv-list .list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .team-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+  .customers-list {
+    column-gap: 24px;
+  }
+  .cust-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .sub-mail {
+    margin-right: 24px;
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers .container {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  .footer .container {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+  .hero {
+    padding-top: 168px;
+    padding-bottom: 168px;
+  }
+  .advantages {
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+  .adv-list {
+    gap: 24px;
+  }
+  .adv-list .list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .icon-pos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .examples {
+    display: block;
+  }
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .team-list {
+    gap: 24px;
+  }
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .customers-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .cust-item {
+    width: calc((100% - 120px) / 6);
+  }
+  .footer .container {
+    gap: 0;
+  }
+  .content {
+    margin-right: 120px;
+  }
+  .subscribe {
+    margin-left: auto;
   }
 }
