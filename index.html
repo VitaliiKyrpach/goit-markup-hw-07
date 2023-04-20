@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container flex">
         <nav class="nav">
           <a class="logo link" href="./index.html">Web<span class="logo-head">Studio</span></a>
@@ -34,8 +34,63 @@
             <li><a class="address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
+        <button class="nav-btn" type="button">
+          <svg class="icon" width="29" height="18">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <button class="menu-btn" type="button">
+          <svg class="icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="menu-nav">
+          <ul class="menu-nav-list list">
+            <li><a class="menu-link link current" href="./index.html">Studio</a></li>
+            <li><a class="menu-link link" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="menu-link link" href="">Contacts</a></li>
+          </ul>
+        </nav>
+        <address class="menu-address">
+          <ul class="menu-add-list list">
+            <li><a class="menu-add-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a class="menu-phone-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+          </ul>
+        </address>
+        <ul class="menu-soc-list list">
+          <li class="soc-item">
+            <a class="soc-link" href="">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-item">
+            <a class="soc-link" href="">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-item">
+            <a class="soc-link" href="">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-item">
+            <a class="soc-link" href="">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
     <main>
       <!-- Hero -->
       <section class="hero">
@@ -93,9 +148,9 @@
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="examples-list list">
-            <li><img src="./images/computer.jpg" alt="computer" width="360" height="300" /></li>
-            <li><img src="./images/phone.jpg" alt="phone" width="360" height="300" /></li>
-            <li><img src="./images/laptop.jpg" alt="laptop" width="360" height="300" /></li>
+            <li><img src="./images/computer.jpg" alt="computer" srcset="./images/computer2x.jpg" width="360" height="300" /></li>
+            <li><img src="./images/phone.jpg" alt="phone" srcset="./images/phone2x.jpg" width="360" height="300" /></li>
+            <li><img src="./images/laptop.jpg" alt="laptop" srcset="./images/laptop2x.jpg" width="360" height="300" /></li>
           </ul>
         </div>
       </section>
@@ -105,7 +160,7 @@
           <h2 class="title">Our Team</h2>
           <ul class="team-list list">
             <li class="card">
-              <img src="./images/mark.jpg" alt="mark" width="264" height="260" />
+              <img src="./images/mark.jpg" alt="mark" width="264" srcset="./images/mark2x.jpg" height="260" />
               <div class="team-content">
                 <h3 class="text-title">Mark Guerrero</h3>
                 <p class="text">Product Designer</p>
@@ -142,7 +197,7 @@
               </div>
             </li>
             <li class="card">
-              <img src="./images/tom.jpg" alt="tom" width="264" height="260" />
+              <img src="./images/tom.jpg" alt="tom" srcset="./images/tom2x.jpg" width="264" height="260" />
               <div class="team-content">
                 <h3 class="text-title">Tom Ford</h3>
                 <p class="text">Frontend Developer</p>
@@ -179,7 +234,7 @@
               </div>
             </li>
             <li class="card">
-              <img src="./images/camila.jpg" alt="camila" width="264" height="260" />
+              <img src="./images/camila.jpg" alt="camila" srcset="./images/camila2x.jpg" width="264" height="260" />
               <div class="team-content">
                 <h3 class="text-title">Camila Garcia</h3>
                 <p class="text">Marketing</p>
@@ -216,7 +271,7 @@
               </div>
             </li>
             <li class="card">
-              <img src="./images/daniel.jpg" alt="daniel" width="264" height="260" />
+              <img src="./images/daniel.jpg" alt="daniel" srcset="./images/daniel2x.jpg" width="264" height="260" />
               <div class="team-content">
                 <h3 class="text-title">Daniel Wilson</h3>
                 <p class="text">UI Designer</p>
