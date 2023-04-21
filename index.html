@@ -34,14 +34,14 @@
             <li><a class="address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
-        <button class="nav-btn" type="button">
+        <button class="nav-btn" data-menu-open type="button">
           <svg class="icon" width="29" height="18">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
-      <div class="mob-menu">
-        <button class="menu-btn" type="button">
+      <div class="mob-menu is-hidden" data-menu>
+        <button class="menu-btn" data-menu-close type="button">
           <svg class="icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -455,5 +455,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -44,6 +44,9 @@ body {
 .link {
   text-decoration: none;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .hidden {
   position: absolute;
   width: 1px;
@@ -229,7 +232,7 @@ body {
   background-color: var(--button-active);
   color: #ffffff;
 }
-.modal-btn .icon {
+.menu-btn .icon {
   fill: currentColor;
 }
 .menu-nav-list {
@@ -253,7 +256,7 @@ body {
 .menu-phone-link {
   color: var(--footer-background);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -291,7 +294,9 @@ body {
 }
 .menu-soc-list {
   display: flex;
-  gap: 56px;
+  justify-content: space-between;
+  max-width: 328px;
+  /* gap: 56px; */
 }
 .current {
   position: relative;
@@ -443,6 +448,7 @@ body {
   gap: 24px;
 }
 .soc-item {
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
 }
@@ -553,8 +559,6 @@ body {
 }
 .smedia-link .icon {
   fill: currentColor;
-}
-.subscribe {
 }
 .subscribe .text {
   display: block;
@@ -742,6 +746,9 @@ body {
 }
 /* -----------------@media----------------- */
 @media screen and (min-width: 428px) {
+  .menu-phone-link {
+    font-size: 36px;
+  }
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back_tab.jpg);
   }
@@ -800,9 +807,11 @@ body {
   .nav-btn {
     display: none;
   }
+
   .nav-list {
     display: flex;
     gap: 40px;
+    margin-left: 120px;
   }
   .address {
     display: block;
@@ -816,13 +825,8 @@ body {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back.jpg);
   }
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back2x.jpg);
-    }
-  }
   .hero-title {
-    width: 496px;
+    max-width: 496px;
     margin-bottom: 36px;
     font-size: 56px;
     line-height: 1.07;
@@ -864,6 +868,11 @@ body {
     padding-left: 24px;
     padding-right: 24px;
   }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back2x.jpg);
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -880,6 +889,9 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+  }
+  .nav-list {
+    margin-left: 76px;
   }
   .hero {
     padding-top: 168px;
