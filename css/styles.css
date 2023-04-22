@@ -141,9 +141,10 @@ body {
 }
 .filter {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 24px;
+  margin-bottom: 48px;
 }
 .thumb {
   position: relative;
@@ -178,19 +179,30 @@ body {
 .cards-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
+}
+.cards-list .card {
+  width: 396px;
 }
 .card-content {
   padding: 32px 16px;
   border: 1px solid var(--footer-text-color);
   border-top: none;
 }
+.card-content .text-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+/* .card-content .text {
+  margin-bottom: 0;
+} */
 /* -----------------header----------------- */
 .header {
   border-bottom: 1px solid var(--footer-text-color);
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .nav {
   display: flex;
@@ -254,7 +266,7 @@ body {
   color: var(--primary-text-color);
 }
 .menu-phone-link {
-  color: var(--footer-background);
+  color: var(--logo-text-color);
   font-weight: 700;
   font-size: 24px;
   font-style: normal;
@@ -296,21 +308,8 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 328px;
-  /* gap: 56px; */
 }
-.current {
-  position: relative;
-  color: var(--button-active);
-}
-.current::after {
-  content: "";
-  position: absolute;
-  top: 44px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--button-active);
-}
+
 .logo {
   color: var(--logo-text-color);
   font-family: "Raleway", sans-serif;
@@ -341,7 +340,6 @@ body {
 }
 .add-list {
   display: flex;
-  /* gap: 12px; */
 }
 .add-list li {
   line-height: 0;
@@ -356,6 +354,10 @@ body {
 }
 .address-link:hover,
 .address-link:focus {
+  color: var(--button-active);
+}
+.current {
+  position: relative;
   color: var(--button-active);
 }
 /* -----------------hero----------------- */
@@ -438,9 +440,15 @@ body {
   padding: 32px 0;
   text-align: center;
 }
-.card .text-title,
-.card .text {
+.team-content .text-title,
+.team-content .text {
   margin-bottom: 8px;
+}
+.team-content .text-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 .soc-list {
   display: flex;
@@ -779,6 +787,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  .content .logo {
     text-align: center;
   }
   .smedia .text {
@@ -807,7 +817,6 @@ body {
   .nav-btn {
     display: none;
   }
-
   .nav-list {
     display: flex;
     gap: 40px;
@@ -821,6 +830,16 @@ body {
   .add-list {
     flex-direction: column;
     gap: 12px;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-active);
+    border-radius: 2px;
   }
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back.jpg);
@@ -873,9 +892,22 @@ body {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_back2x.jpg);
     }
   }
+  .filter {
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+  .cards-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
   .customers .container {
     padding-left: 108px;
     padding-right: 108px;
@@ -883,6 +915,11 @@ body {
   .footer .container {
     padding-left: 108px;
     padding-right: 108px;
+  }
+  .cards-list {
+  }
+  .cards-list .card {
+    width: 356px;
   }
 }
 
@@ -920,6 +957,12 @@ body {
   .adv-list .list-item {
     width: calc((100% - 72px) / 4);
   }
+  .adv-list .text-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
   .icon-pos {
     display: flex;
     align-items: center;
@@ -954,5 +997,11 @@ body {
   }
   .subscribe {
     margin-left: auto;
+  }
+  .cards-list {
+    row-gap: 48px;
+  }
+  .cards-list .card {
+    width: 360px;
   }
 }
