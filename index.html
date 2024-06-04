@@ -15,75 +15,94 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+      'logo': ['Raleway', 'sans-serif']
+    },
+          extend: {
+            colors: {
+              colorSec: '#2e2f42;',
+              colorPrim: '#434455',
+              colorAct: '#404bbf',
+              colorLogoAcsent: '#4d5ae5'
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <header class="header">
-      <div class="container flex">
-        <nav class="nav">
-          <a class="logo link" href="./index.html">Web<span class="logo-head">Studio</span></a>
-          <ul class="nav-list list">
-            <li><a class="nav-link link current" href="./index.html">Studio</a></li>
-            <li><a class="nav-link link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="nav-link link" href="">Contacts</a></li>
+  <body class="font-sans text-colorPrim text-base">
+    <header class="py-6">
+      <div class="container mx-auto flex justify-between">
+        <nav class="flex items-center">
+          <a class="font-logo font-extrabold text-lg uppercase text-colorLogoAcsent leading-5" href="./index.html">Web<span class="text-colorSec">Studio</span></a>
+          <ul class="flex gap-9 ml-20 font-medium " >
+            <li><a class="text-colorAct hover:text-colorAct relative  after:content-[''] after:absolute after:top-10 after:left-0 after:w-full after:h-1 after:bg-colorAct" href="./index.html">Studio</a></li>
+            <li><a class="text-colorSec hover:text-colorAct" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="text-colorSec hover:text-colorAct" href="">Contacts</a></li>
           </ul>
         </nav>
-        <address class="address">
-          <ul class="add-list list">
-            <li><a class="address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a class="address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        <address class="">
+          <ul class="flex gap-9">
+            <li><a class="not-italic" href="mailto:info@devstudio.com ">info@devstudio.com</a></li>
+            <li><a class="not-italic" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
-        <button class="nav-btn" data-menu-open type="button">
-          <svg class="icon" width="29" height="18">
+        <button class="hidden" data-menu-open type="button">
+          <svg class="" width="29" height="18">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
-      <div class="mob-menu is-hidden" data-menu>
-        <button class="menu-btn" data-menu-close type="button">
-          <svg class="icon" width="8" height="8">
+      <div class="hidden" data-menu>
+        <button class="" data-menu-close type="button">
+          <svg class="" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <nav class="menu-nav">
-          <ul class="menu-nav-list list">
-            <li><a class="menu-link link current" href="./index.html">Studio</a></li>
-            <li><a class="menu-link link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="menu-link link" href="">Contacts</a></li>
+        <nav class="">
+          <ul class="">
+            <li><a class="" href="./index.html">Studio</a></li>
+            <li><a class="" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="" href="">Contacts</a></li>
           </ul>
         </nav>
-        <address class="menu-address">
-          <ul class="menu-add-list list">
-            <li><a class="menu-add-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a class="menu-phone-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        <address class="">
+          <ul class="">
+            <li><a class="" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a class="" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
-        <ul class="menu-soc-list list">
-          <li class="soc-item">
-            <a class="soc-link" href="">
-              <svg class="icon" width="24" height="24">
+        <ul class="">
+          <li class="">
+            <a class="" href="">
+              <svg class="" width="24" height="24">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="soc-item">
-            <a class="soc-link" href="">
-              <svg class="icon" width="24" height="24">
+          <li class="">
+            <a class="" href="">
+              <svg class="" width="24" height="24">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="soc-item">
-            <a class="soc-link" href="">
-              <svg class="icon" width="24" height="24">
+          <li class="">
+            <a class="" href="">
+              <svg class="" width="24" height="24">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="soc-item">
-            <a class="soc-link" href="">
-              <svg class="icon" width="24" height="24">
+          <li class="">
+            <a class="" href="">
+              <svg class="" width="24" height="24">
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
             </a>
