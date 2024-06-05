@@ -30,96 +30,106 @@
               colorPrim: '#434455',
               colorAct: '#404bbf',
               colorLogoAcsent: '#4d5ae5'
-            }
+            },
+            screen:{
+              sm: '480px',
+              md: '768px',
+              lg: '1024px'
+            },backgroundImage: {
+              'back-hero': "linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero_back.jpg')",
+            },
           }
         }
       }
     </script>
   </head>
   <body class="font-sans text-colorPrim text-base">
-    <header class="py-6">
-      <div class="container mx-auto flex justify-between">
+    <header class="h-[72px] flex">
+      <div class="container mx-auto flex justify-between items-center px-[15px] max-w-[426px] md:max-w-[768px] lg:max-w-[1024px]">
         <nav class="flex items-center">
           <a class="font-logo font-extrabold text-lg uppercase text-colorLogoAcsent leading-5" href="./index.html">Web<span class="text-colorSec">Studio</span></a>
-          <ul class="flex gap-9 ml-20 font-medium " >
-            <li><a class="text-colorAct hover:text-colorAct relative  after:content-[''] after:absolute after:top-10 after:left-0 after:w-full after:h-1 after:bg-colorAct" href="./index.html">Studio</a></li>
-            <li><a class="text-colorSec hover:text-colorAct" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="text-colorSec hover:text-colorAct" href="">Contacts</a></li>
+          <ul class="hidden md:flex gap-9 ml-20 font-medium " >
+            <li><a class="text-colorAct hover:text-colorAct transition-colors relative after:content-[''] after:absolute after:top-[45px] after:left-0 after:w-full after:h-1 after:bg-colorAct" href="./index.html">Studio</a></li>
+            <li><a class="text-colorSec hover:text-colorAct transition-colors" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="text-colorSec hover:text-colorAct transition-colors" href="">Contacts</a></li>
           </ul>
         </nav>
-        <address class="">
-          <ul class="flex gap-9">
+        <address class="hidden md:flex items-center">
+          <ul class="flex flex-col gap-3 lg:flex-row lg:gap-9">
             <li><a class="not-italic" href="mailto:info@devstudio.com ">info@devstudio.com</a></li>
             <li><a class="not-italic" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
           </ul>
         </address>
-        <button class="hidden" data-menu-open type="button">
-          <svg class="" width="29" height="18">
+        <button class="w-[32px] h-[32px] md:hidden" data-menu-open type="button">
+          <svg class="w-full h-full" width="29" height="18">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
-      <div class="hidden" data-menu>
-        <button class="" data-menu-close type="button">
-          <svg class="" width="8" height="8">
+      <!-- mobile-menu -->
+      <div class="fixed top-0 left-0 flex flex-col justify-between w-full h-full py-[24px] px-[40px] bg-white translate-x-[-100%] transition-transform" data-menu>
+        <button class="w-[24px] h-[24px] absolute right-[70px]" data-menu-close type="button">
+          <svg class="w-full h-full" >
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <nav class="">
-          <ul class="">
-            <li><a class="" href="./index.html">Studio</a></li>
-            <li><a class="" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="" href="">Contacts</a></li>
+        <nav class="pt-[50px]">
+          <ul class="flex flex-col gap-[40px]">
+            <li><a class="text-[36px] font-bold text-colorAct hover:text-colorAct transition-colors" href="./index.html">Studio</a></li>
+            <li><a class="text-[36px] font-bold text-colorSec hover:text-colorAct transition-colors" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="text-[36px] font-bold text-colorSec hover:text-colorAct transition-colors" href="">Contacts</a></li>
           </ul>
         </nav>
-        <address class="">
-          <ul class="">
-            <li><a class="" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li><a class="" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        <div>
+          <address>
+            <ul class="flex flex-col gap-[40px] mb-[48px]">
+              <li><a class="text-[36px] font-bold not-italic" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+              <li><a class="text-[20px] font-medium not-italic" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            </ul>
+          </address>
+          <ul class="flex gap-[56px]">
+            <li class="w-[40px] h-[40px]">
+              <a class="flex w-full h-full items-center justify-center rounded-full bg-colorAct hover:bg-colorLogoAcsent transition-colors" href="">
+                <svg class="fill-white" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="w-[40px] h-[40px]">
+              <a class="flex w-full h-full items-center justify-center rounded-full bg-colorAct hover:bg-colorLogoAcsent transition-colors" href="">
+                <svg class="fill-white" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="w-[40px] h-[40px]">
+              <a class="flex w-full h-full items-center justify-center rounded-full bg-colorAct hover:bg-colorLogoAcsent transition-colors" href="">
+                <svg class="fill-white" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="w-[40px] h-[40px]">
+              <a class="flex w-full h-full items-center justify-center rounded-full bg-colorAct hover:bg-colorLogoAcsent transition-colors" href="">
+                <svg class="fill-white" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
-        </address>
-        <ul class="">
-          <li class="">
-            <a class="" href="">
-              <svg class="" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="">
-            <a class="" href="">
-              <svg class="" width="24" height="24">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="">
-            <a class="" href="">
-              <svg class="" width="24" height="24">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="">
-            <a class="" href="">
-              <svg class="" width="24" height="24">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="button" data-modal-open type="button">Order Service</button>
+      <section class="bg-back-hero bg-center bg-cover bg-no-repeat">
+        <div class="py-[112px] md:py-[188px]">
+          <h1 class="text-white text-[36px] leading-[1.07] font-bold text-center w-[320px] mb-[72px] mx-auto md:text-[56px] md:w-[500px] md:mb-[36px] lg:mb-[48px]" >Effective Solutions for Your Business</h1>
+          <button class="block text-white font-medium py-[16px] px-[32px] mx-auto rounded-[4px] bg-colorLogoAcsent hover:bg-colorAct transition-colors" data-modal-open type="button">Order Service</button>
         </div>
       </section>
       <!-- Advantages -->
-      <section class="advantages">
+      <!-- <section class="advantages">
         <div class="container">
           <h2 class="title hidden">Advantages</h2>
           <ul class="adv-list list">
@@ -161,9 +171,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- What are we doing -->
-      <section class="examples">
+      <!-- <section class="examples">
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="examples-list list">
@@ -172,9 +182,9 @@
             <li><img src="./images/laptop.jpg" alt="laptop" srcset="./images/laptop2x.jpg" width="360" height="300" /></li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Our Team -->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="title">Our Team</h2>
           <ul class="team-list list">
@@ -328,9 +338,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Customers -->
-      <section class="customers">
+      <!-- <section class="customers">
         <div class="container">
           <h2 class="title">Customers</h2>
           <ul class="customers-list list">
@@ -378,9 +388,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="content">
           <a class="logo link" href="./index.html">Web<span class="logo-btm">Studio</span></a>
@@ -433,8 +443,8 @@
           </form>
         </div>
       </div>
-    </footer>
-    <div class="backdrop is-hidden" data-modal>
+    </footer> -->
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" data-modal-close type="button">
           <svg class="icon" width="8" height="8">
@@ -472,7 +482,7 @@
           <button class="button" type="submit">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>

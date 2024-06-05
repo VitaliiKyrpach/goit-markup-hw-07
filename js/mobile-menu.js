@@ -1,15 +1,13 @@
-(() => {
-  const refs = {
-    openMenuBtn: document.querySelector("[data-menu-open]"),
-    closeMenuBtn: document.querySelector("[data-menu-close]"),
-    menu: document.querySelector("[data-menu]"),
-  };
+const openMenuBtn = document.querySelector("[data-menu-open]");
+const closeMenuBtn = document.querySelector("[data-menu-close]");
+const menu = document.querySelector("[data-menu]");
 
-  refs.openMenuBtn.addEventListener("click", toggleMenu);
-  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+const toggleMenu = () => {
+  console.log('click')
+  menu.classList.toggle("translate-x-[-100%]");
+  menu.classList.toggle("translate-x-0");
+  document.body.classList.toggle("no-scroll");
+}
 
-  function toggleMenu() {
-    refs.menu.classList.toggle("is-hidden");
-    document.body.classList.toggle("no-scroll");
-  }
-})();
+openMenuBtn.addEventListener("click", toggleMenu);
+closeMenuBtn.addEventListener("click", toggleMenu);
