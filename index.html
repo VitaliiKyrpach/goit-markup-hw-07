@@ -29,15 +29,27 @@
               colorSec: '#2e2f42;',
               colorPrim: '#434455',
               colorAct: '#404bbf',
-              colorLogoAcsent: '#4d5ae5'
+              colorLogoAcsent: '#4d5ae5',
+              backItems: 'rgba(244, 244, 253, 1)',
+              backSection: '#F4F4FD',
+              backCard: '#FFFFFF',
+              borderCard: '#8E8F99',
             },
-            screen:{
+            screens:{
               sm: '480px',
               md: '768px',
-              lg: '1024px'
-            },backgroundImage: {
+              lg: '1158px',
+            },
+            backgroundImage: {
               'back-hero': "linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero_back.jpg')",
             },
+            boxShadow: {
+              cardShadow: '0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);'
+            },
+            width:{
+              customerSM: 'calc((100% - 16px) / 2)',
+              customerMD: 'calc((100% - 48px) / 3)',
+            }
           }
         }
       }
@@ -45,7 +57,7 @@
   </head>
   <body class="font-sans text-colorPrim text-base">
     <header class="h-[72px] flex">
-      <div class="container mx-auto flex justify-between items-center px-[15px] max-w-[426px] md:max-w-[768px] lg:max-w-[1024px]">
+      <div class="container mx-auto flex justify-between items-center px-[15px] max-w-[426px] md:max-w-[768px] lg:max-w-[1158px]">
         <nav class="flex items-center">
           <a class="font-logo font-extrabold text-lg uppercase text-colorLogoAcsent leading-5" href="./index.html">Web<span class="text-colorSec">Studio</span></a>
           <ul class="hidden md:flex gap-9 ml-20 font-medium " >
@@ -122,102 +134,102 @@
     </header>
     <main>
       <!-- Hero -->
-      <section class="bg-back-hero bg-center bg-cover bg-no-repeat">
+      <section class="bg-back-hero bg-center bg-cover bg-no-repeat max-w-[1440px] mx-auto">
         <div class="py-[112px] md:py-[188px]">
           <h1 class="text-white text-[36px] leading-[1.07] font-bold text-center w-[320px] mb-[72px] mx-auto md:text-[56px] md:w-[500px] md:mb-[36px] lg:mb-[48px]" >Effective Solutions for Your Business</h1>
           <button class="block text-white font-medium py-[16px] px-[32px] mx-auto rounded-[4px] bg-colorLogoAcsent hover:bg-colorAct transition-colors" data-modal-open type="button">Order Service</button>
         </div>
       </section>
       <!-- Advantages -->
-      <!-- <section class="advantages">
-        <div class="container">
-          <h2 class="title hidden">Advantages</h2>
-          <ul class="adv-list list">
-            <li class="list-item">
-              <div class="icon-pos">
-                <svg class="icon" width="64" height="64">
+      <section class="py-[96px] lg:py-[120px]">
+        <div class="container mx-auto px-[15px] max-w-[426px] md:max-w-[768px] lg:max-w-[1158px]">
+          <h2 class="hidden">Advantages</h2>
+          <ul class="flex flex-col gap-[72px] md:flex-row md:flex-wrap md:gap-x-[24px] md:gap-y-[72px] lg:gap-x-[21px] lg:justify-center ">
+            <li class="md:w-[356px] lg:w-[264px]">
+              <div class="hidden lg:flex h-[112px] justify-center items-center mb-[8px] bg-backItems rounded-[4px]">
+                <svg  width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="text-title">Strategy</h3>
-              <p class="text">Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
+              <h3 class="text-colorSec text-[36px] font-medium leading-[1.2] mb-[8px] text-center md:text-left lg:text-[20px]">Strategy</h3>
+              <p class="font-normal">Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
             </li>
-            <li class="list-item">
-              <div class="icon-pos">
-                <svg class="icon" width="64" height="64">
+            <li class="md:w-[356px] lg:w-[264px]">
+              <div class="hidden lg:flex h-[112px] justify-center items-center mb-[8px] bg-backItems rounded-[4px]">
+                <svg  width="64" height="64">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="text-title">Punctuality</h3>
-              <p class="text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+              <h3 class="text-colorSec text-[36px] font-medium leading-[1.2] mb-[8px] text-center md:text-left lg:text-[20px]">Punctuality</h3>
+              <p class="font-normal">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
             </li>
-            <li class="list-item">
-              <div class="icon-pos">
-                <svg class="icon" width="64" height="64">
+            <li class="md:w-[356px] lg:w-[264px]">
+              <div class="hidden lg:flex h-[112px] justify-center items-center mb-[8px] bg-backItems rounded-[4px]">
+                <svg  width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="text-title">Diligence</h3>
-              <p class="text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
+              <h3 class="text-colorSec text-[36px] font-medium leading-[1.2] mb-[8px] text-center md:text-left lg:text-[20px]">Diligence</h3>
+              <p class="font-normal">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
             </li>
-            <li class="list-item">
-              <div class="icon-pos">
-                <svg class="icon" width="64" height="64">
+            <li class="md:w-[356px] lg:w-[264px]">
+              <div class="hidden lg:flex h-[112px] justify-center items-center mb-[8px] bg-backItems rounded-[4px]">
+                <svg  width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="text-title">Technologies</h3>
-              <p class="text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+              <h3 class="text-colorSec text-[36px] font-medium leading-[1.2] mb-[8px] text-center md:text-left lg:text-[20px]">Technologies</h3>
+              <p class="font-normal">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- What are we doing -->
-      <!-- <section class="examples">
-        <div class="container">
-          <h2 class="title">What are we doing</h2>
-          <ul class="examples-list list">
+      <section class="hidden lg:flex flex-nowrap justify-between pb-[120px]">
+        <div class="container mx-auto px-[15px] max-w-[1158px]">
+          <h2 class="text-[36px] text-center text-colorSec font-bold leading-[1.11] mb-[72px]">What are we doing</h2>
+          <ul class="flex justify-between">
             <li><img src="./images/computer.jpg" alt="computer" srcset="./images/computer2x.jpg" width="360" height="300" /></li>
             <li><img src="./images/phone.jpg" alt="phone" srcset="./images/phone2x.jpg" width="360" height="300" /></li>
             <li><img src="./images/laptop.jpg" alt="laptop" srcset="./images/laptop2x.jpg" width="360" height="300" /></li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Our Team -->
-      <!-- <section class="team">
-        <div class="container">
-          <h2 class="title">Our Team</h2>
-          <ul class="team-list list">
-            <li class="card">
+      <section class="bg-backSection py-[96px] lg:py-[120px]">
+        <div class="container mx-auto px-[15px] w-[294px] md:w-[582px] lg:w-[1158px]">
+          <h2 class="text-[36px] text-center text-colorSec font-bold leading-[1.11] mb-[72px]">Our Team</h2>
+          <ul class="flex flex-col gap-[72px] md:flex-row md:flex-wrap md:gap-x-[24px] md:gap-y-[64px]">
+            <li class="bg-backCard shadow-cardShadow rounded-br-[4px] rounded-bl-[4px]">
               <img src="./images/mark.jpg" alt="mark" width="264" srcset="./images/mark2x.jpg" height="260" />
-              <div class="team-content">
-                <h3 class="text-title">Mark Guerrero</h3>
-                <p class="text">Product Designer</p>
-                <ul class="soc-list list">
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+              <div class="py-[32px] px-[16px]">
+                <h3 class="text-[20px] text-colorSec font-medium text-center mb-[8px]">Mark Guerrero</h3>
+                <p class="font-normal text-center mb-[8px]">Product Designer</p>
+                <ul class="flex justify-between">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -225,36 +237,36 @@
                 </ul>
               </div>
             </li>
-            <li class="card">
+            <li class="bg-backCard shadow-cardShadow rounded-br-[4px] rounded-bl-[4px]">
               <img src="./images/tom.jpg" alt="tom" srcset="./images/tom2x.jpg" width="264" height="260" />
-              <div class="team-content">
-                <h3 class="text-title">Tom Ford</h3>
-                <p class="text">Frontend Developer</p>
-                <ul class="soc-list list">
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+              <div class="py-[32px] px-[16px]">
+                <h3 class="text-[20px] text-colorSec font-medium text-center mb-[8px]">Tom Ford</h3>
+                <p class="font-normal text-center mb-[8px]">Frontend Developer</p>
+                <ul class="flex justify-between">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -262,36 +274,36 @@
                 </ul>
               </div>
             </li>
-            <li class="card">
+            <li class="bg-backCard shadow-cardShadow rounded-br-[4px] rounded-bl-[4px]">
               <img src="./images/camila.jpg" alt="camila" srcset="./images/camila2x.jpg" width="264" height="260" />
-              <div class="team-content">
-                <h3 class="text-title">Camila Garcia</h3>
-                <p class="text">Marketing</p>
-                <ul class="soc-list list">
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+              <div class="py-[32px] px-[16px]">
+                <h3 class="text-[20px] text-colorSec font-medium text-center mb-[8px]">Camila Garcia</h3>
+                <p class="font-normal text-center mb-[8px]">Marketing</p>
+                <ul class="flex justify-between">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -299,36 +311,36 @@
                 </ul>
               </div>
             </li>
-            <li class="card">
+            <li class="bg-backCard shadow-cardShadow rounded-br-[4px] rounded-bl-[4px]">
               <img src="./images/daniel.jpg" alt="daniel" srcset="./images/daniel2x.jpg" width="264" height="260" />
-              <div class="team-content">
-                <h3 class="text-title">Daniel Wilson</h3>
-                <p class="text">UI Designer</p>
-                <ul class="soc-list list">
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+              <div class="py-[32px] px-[16px]">
+                <h3 class="text-[20px] text-colorSec font-medium text-center mb-[8px]">Daniel Wilson</h3>
+                <p class="font-normal text-center mb-[8px]">UI Designer</p>
+                <ul class="flex justify-between">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-item">
-                    <a class="soc-link" href="">
-                      <svg class="icon" width="16" height="16">
+                  <li class="w-[40px] h-[40px]">
+                    <a class="flex justify-center items-center w-full h-full bg-colorLogoAcsent rounded-full hover:bg-colorAct transition-colors" href="">
+                      <svg class="fill-white" width="16" height="16">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -338,57 +350,57 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Customers -->
-      <!-- <section class="customers">
-        <div class="container">
-          <h2 class="title">Customers</h2>
-          <ul class="customers-list list">
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+      <section class="py-[96px] lg:py-[120px]">
+        <div class="container mx-auto px-[15px] max-w-[426px] md:max-w-[582px] lg:max-w-[1158px]">
+          <h2 class="text-[36px] text-center text-colorSec font-bold leading-[1.11] mb-[72px]">Customers</h2>
+          <ul class="flex flex-wrap gap-y-[72px] gap-x-[16px] md:gap-x-[24px] lg:flex-nowrap">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px] " href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoYa"></use>
                 </svg>
               </a>
             </li>
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px]" href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoTag"></use>
                 </svg>
               </a>
             </li>
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px]" href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoComp"></use>
                 </svg>
               </a>
             </li>
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px]" href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoFoster"></use>
                 </svg>
               </a>
             </li>
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px]" href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoBrand"></use>
                 </svg>
               </a>
             </li>
-            <li class="cust-item">
-              <a class="cust-link" href="">
-                <svg class="icon" width="104" height="56">
+            <li class="max-w-[190px] w-customerSM md:w-customerMD">
+              <a class="flex justify-center items-center h-[88px] border-[1px] border-borderCard rounded-[4px]" href="">
+                <svg class="fill-borderCard" width="104" height="56">
                   <use href="./images/icons.svg#icon-LogoLine"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- <footer class="footer">
       <div class="container">
